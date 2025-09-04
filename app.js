@@ -5,10 +5,13 @@ const input4 = document.querySelector(".input-4");
 const input5 = document.querySelector(".input-5");
 const input6 = document.querySelector(".input-6");
 const input7 = document.querySelector(".input-7");
+const input8 = document.querySelector(".input-8");
+const input9 = document.querySelector(".input-9");
 const btn1 =  document.querySelector(".btn-1");
 const btn2 =  document.querySelector(".btn-2");
 const btn3 =  document.querySelector(".btn-3");
 const btn4 =  document.querySelector(".btn-4");
+const btn5 =  document.querySelector(".btn-5");
 const salida = document.querySelector(".salida");
 
 btn1.addEventListener("click", ()=>{
@@ -37,14 +40,23 @@ btn4.addEventListener("click", ()=>{
 
 nombre ? salida.textContent = `hola ${nombre}` : alert("no ingresaste tu nombre");*/
 
-// ejercicio 17
+// ejercicio 17 este despues lo resuelvo mejor
 
-let i = 0;
+/*let i = 0;
+let numero;
+let media = [];
 
 while (i < 3){
-   let numero = parseInt(prompt("ingresa tres numero por secuencia"));
-   let media = [];
+   numero = parseInt(prompt("ingresa tres numero por secuencia"));
    media.push(numero);
-   salida.textContent = `hola ${media}`;
    i++
 }
+
+salida.textContent = `hola ${media.reduce(function (a, b) { return a + b / media.length;})}`;*/
+
+
+btn5.addEventListener("click", ()=>{
+   let litro = parseFloat(input9.value);
+   let kilometros = parseFloat(input8.value);
+   salida.textContent = `el consumo de combustible por kilometros es: ${Math.floor(litro / kilometros * 100) /100 }`;
+})
